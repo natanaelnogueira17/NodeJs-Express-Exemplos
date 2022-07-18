@@ -7,15 +7,16 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const express = __webpack_require__(/*! express */ \"express\")\r\n\r\nconst app = express()\r\n\r\napp.get('/', function(req, res){\r\n  res.send('hello world 3')\r\n})\r\n\r\napp.get('/teste', function(req, res){\r\n  res.send('hello Teste')\r\n})\r\n\r\napp.listen(3000, ()=> console.log(`ONLINE http://localhost:3000`))\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst app = express__WEBPACK_IMPORTED_MODULE_0__()\r\n\r\napp.get('/', function(req, res){\r\n  res.send('GET/ ')\r\n})\r\n\r\napp.post('/', function(req, res ){\r\n  res.status(201).send('POST/')\r\n})\r\n\r\napp.put('/', function(req, res){\r\n  res.send('PUT/')\r\n})\r\n\r\n\r\napp.delete('/', function(reqq, res){\r\nres.send('DELETE/')\r\n})\r\n\r\n\r\n\r\n\r\napp.listen(3000, ()=> console.log(`ONLINE http://localhost:3000`))\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/index.js?");
 
 /***/ }),
 
@@ -25,7 +26,6 @@ eval("const express = __webpack_require__(/*! express */ \"express\")\r\n\r\ncon
   \**************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("express");
 
 /***/ })
@@ -55,6 +55,47 @@ module.exports = require("express");
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
