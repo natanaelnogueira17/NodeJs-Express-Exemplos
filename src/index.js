@@ -1,16 +1,25 @@
-import * as express from 'express'
+import * as  express from 'express'
 
 const app = express()
-import UserController from './controller/UserController'
 
-app.use('/use', UserController)
-app.post('/post', function(req, res){
-  res.send('CREATE POST/ ')
+app.get('/',(req, res) => {
+  res.send ('GET/')
 })
 
-app.get('/post/:id?', function(req, res){
-  res.send('GET POST/ ')
+app.post('/',(req, res) => {
+  res.status(201).send('POST/')
 })
 
+app.put('/',(req, res) => {
+  res.send('PUT/')
+})
 
-app.listen(3000, ()=> console.log(`ONLINE http://localhost:3000`))
+app.delete('/',(req, res) => {
+  res.status(400).send('DELETE/')
+
+  app.patch('/',(req, res) => {
+    res.send('PATCH/')
+  })
+})
+
+app.listen(3000, ()=> console.log('online http://localhost:3000'))
