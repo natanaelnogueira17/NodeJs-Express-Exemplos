@@ -10,13 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/controller/postController.js":
+/*!******************************************!*\
+  !*** ./src/controller/postController.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst router = (0,express__WEBPACK_IMPORTED_MODULE_0__.Router)()\r\n\r\nrouter.post('/',(req, res) => {\r\n  res.send ('CREATE POST/')\r\n})\r\n\r\nrouter.get('/:id?',(req, res) => {\r\n  //duas opções: listar todos ou apenas um\r\n  res.send ('GET POST/')\r\n})\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/controller/postController.js?");
+
+/***/ }),
+
+/***/ "./src/controller/userController.js":
+/*!******************************************!*\
+  !*** ./src/controller/userController.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst router = (0,express__WEBPACK_IMPORTED_MODULE_0__.Router)()\r\n\r\napp.post('/signup',(req, res) => {\r\n  res.send ('SIGNUP/')\r\n})\r\n\r\napp.post('/login',(req, res) => {\r\n  res.send ('LOGIN/')\r\n})\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);\r\n\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/controller/userController.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst app = express__WEBPACK_IMPORTED_MODULE_0__()\r\n\r\napp.get('/',(req, res) => {\r\n  res.send ('GET/')\r\n})\r\n\r\napp.post('/',(req, res) => {\r\n  res.status(201).send('POST/')\r\n})\r\n\r\napp.put('/',(req, res) => {\r\n  res.send('PUT/')\r\n})\r\n\r\napp.delete('/',(req, res) => {\r\n  res.status(400).send('DELETE/')\r\n\r\n  app.patch('/',(req, res) => {\r\n    res.send('PATCH/')\r\n  })\r\n})\r\n\r\napp.listen(3000, ()=> console.log('online http://localhost:3000'))\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _controller_userController__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller/userController */ \"./src/controller/userController.js\");\n/* harmony import */ var _controller_postController__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controller/postController */ \"./src/controller/postController.js\");\n\r\n\r\n\r\nconst app = express__WEBPACK_IMPORTED_MODULE_0__()\r\n;\r\n\r\n\r\napp.use('/user', _controller_userController__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n\r\napp.use('/post', _controller_postController__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\n\r\n\r\n\r\n\r\napp.listen(3000, ()=> console.log('online http://localhost:3000'))\n\n//# sourceURL=webpack://nodejs-express-exemplos/./src/index.js?");
 
 /***/ }),
 
